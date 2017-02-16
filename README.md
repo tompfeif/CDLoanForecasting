@@ -22,13 +22,13 @@ Once we have a stationary time series, we must ask two questions:
   #AR(1) formulation: x(t) = alpha * x(t-1) + error(t)
   #MA formulation: x(t) = beta * error(t-1) + error(t)
 
-#MAKE DATA STATIONARY
-#Differencing is commonly the process of subtracting all data points from the previous: y(t) - y(t-1). A stationary time series is one whose statistical properties such as mean, variance, etc. are constant over time. The mean can not change over time (trend), the variance can not change over time (spread)
+### MAKE DATA STATIONARY
+Differencing is commonly the process of subtracting all data points from the previous: y(t) - y(t-1). A stationary time series is one whose statistical properties such as mean, variance, etc. are constant over time. The mean can not change over time (trend), the variance can not change over time (spread)
 Unit root tests for stationarity: KPSS, Augmented Dickey-Fuller, Phillips-Perron
 
 #---------------- ARIMA MODEL ------------------
-#Unit root tests for stationarity: KPSS, Augmented Dickey-Fuller, Phillips-Perron
-#ndiffs(data, alpha=.05, test=c("kpss","adf","pp")) & diff(data, differences=)
+Unit root tests for stationarity: KPSS, Augmented Dickey-Fuller, Phillips-Perron
+ndiffs(data, alpha=.05, test=c("kpss","adf","pp")) & diff(data, differences=)
 par(mfrow = c(1,2))#correlograma: acf y pacf to find AR or MA process
 acf(tsdata$totall, lag.max = 25, main = "") #correlation of y(t) & y(t-n)
 pacf(tsdata$totall, lag.max = 25, main = "") #correlation of y(t) & y(t-n) after removing other time lag effects
