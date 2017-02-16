@@ -10,4 +10,4 @@ Since the forecast requested is 18 periods in the future, it was acknowledged th
 
 The historical data is from 10-31-2012 to 6-30-2016, and includes monthly data of 45 periods. The data exhibits a trend, and because of the limited data, a seasonal component cannot be determined. Therefore it seems that a time series model with trend is most appropriate.
 
-Cross validation is a great way to select appropriate models, but because of the limited data and the growth shifts of the data, cross validation will not be used to select a model, and instead arima and exponential smoothing models will be combined to create forecasts.
+Cross validation is a great way to select appropriate models, but because of the limited data and the growth shifts of the data, cross validation will not be used to select a model, and instead arima and exponential smoothing models will be combined to create forecasts. Cross validation can be done with the holdout method or K-fold cross validation.
